@@ -31,3 +31,9 @@ coverage.txt
 *.swp
 /example/client/client
 /example/server/server
+
+# Visual Studio Code
+.vscode
+
+# IDEA
+.idea
