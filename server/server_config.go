@@ -93,3 +93,8 @@ func (s *Server) SetAuthorizeScopeHandler(handler AuthorizeScopeHandler) {
 func (s *Server) SetResponseTokenHandler(handler ResponseTokenHandler) {
 	s.ResponseTokenHandler = handler
 }
+
+// SetRedirectHandler redirect handling
+func (s *Server) SetRedirectHandler(handler RedirectHandler) {
+	s.RedirectHandler = handler
+}

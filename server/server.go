@@ -56,6 +56,7 @@ type Server struct {
 	AccessTokenExpHandler        AccessTokenExpHandler
 	AuthorizeScopeHandler        AuthorizeScopeHandler
 	ResponseTokenHandler         ResponseTokenHandler
+	RedirectHandler              RedirectHandler
 }
 
 func (s *Server) handleError(w http.ResponseWriter, req *AuthorizeRequest, err error) error {
@@ -76,9 +77,19 @@ func (s *Server) redirectError(w http.ResponseWriter, req *AuthorizeRequest, err
 }
 
 func (s *Server) redirect(w http.ResponseWriter, req *AuthorizeRequest, data map[string]interface{}) error {
-	uri, err := s.GetRedirectURI(req, data)
-	if err != nil {
-		return err
+	var uri string
+	if fn := s.RedirectHandler; fn != nil {
+		realuri, err := fn(req)
+		if err != nil {
+			return err
+		}
+		uri = realuri
+	} else {
+		realuri, err := s.GetRedirectURI(req, data)
+		if err != nil {
+			return err
+		}
+		uri = realuri
 	}
 
 	w.Header().Set("Location", uri)
