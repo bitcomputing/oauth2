@@ -2,12 +2,13 @@ package mongo
 
 import (
 	"context"
-	"github.com/go-oauth2/oauth2/v4"
+	"log"
+	"time"
+
+	"github.com/bitcomputing/oauth2/v4"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
-	"log"
-	"time"
 )
 
 // transactionData is the object saved in the TxnCName db

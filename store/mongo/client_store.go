@@ -6,8 +6,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/go-oauth2/oauth2/v4"
-	"github.com/go-oauth2/oauth2/v4/models"
+	"github.com/bitcomputing/oauth2/v4"
+	"github.com/bitcomputing/oauth2/v4/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"

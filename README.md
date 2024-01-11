@@ -31,7 +31,7 @@
 ### Download and install
 
 ```bash
-go get -u -v github.com/go-oauth2/oauth2/v4/...
+go get -u -v github.com/bitcomputing/oauth2/v4/...
 ```
 
 ### Create file `server.go`
@@ -43,11 +43,11 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/go-oauth2/oauth2/v4/errors"
-	"github.com/go-oauth2/oauth2/v4/manage"
-	"github.com/go-oauth2/oauth2/v4/models"
-	"github.com/go-oauth2/oauth2/v4/server"
-	"github.com/go-oauth2/oauth2/v4/store"
+	"github.com/bitcomputing/oauth2/v4/errors"
+	"github.com/bitcomputing/oauth2/v4/manage"
+	"github.com/bitcomputing/oauth2/v4/models"
+	"github.com/bitcomputing/oauth2/v4/server"
+	"github.com/bitcomputing/oauth2/v4/store"
 )
 
 func main() {
@@ -138,7 +138,7 @@ Simulation examples of authorization code model, please check [example](/example
 ```go
 
 import (
-	"github.com/go-oauth2/oauth2/v4/generates"
+	"github.com/bitcomputing/oauth2/v4/generates"
 	"github.com/dgrijalva/jwt-go"
 )
 
@@ -185,13 +185,13 @@ if !ok || !token.Valid {
 
 Copyright (c) 2016 Lyric
 
-[build-status-url]: https://travis-ci.org/go-oauth2/oauth2
-[build-status-image]: https://travis-ci.org/go-oauth2/oauth2.svg?branch=master
-[codecov-url]: https://codecov.io/gh/go-oauth2/oauth2
-[codecov-image]: https://codecov.io/gh/go-oauth2/oauth2/branch/master/graph/badge.svg
-[reportcard-url]: https://goreportcard.com/report/github.com/go-oauth2/oauth2/v4
-[reportcard-image]: https://goreportcard.com/badge/github.com/go-oauth2/oauth2/v4
-[godoc-url]: https://godoc.org/github.com/go-oauth2/oauth2/v4
-[godoc-image]: https://godoc.org/github.com/go-oauth2/oauth2/v4?status.svg
+[build-status-url]: https://travis-ci.org/bitcomputing/oauth2
+[build-status-image]: https://travis-ci.org/bitcomputing/oauth2.svg?branch=master
+[codecov-url]: https://codecov.io/gh/bitcomputing/oauth2
+[codecov-image]: https://codecov.io/gh/bitcomputing/oauth2/branch/master/graph/badge.svg
+[reportcard-url]: https://goreportcard.com/report/github.com/bitcomputing/oauth2/v4
+[reportcard-image]: https://goreportcard.com/badge/github.com/bitcomputing/oauth2/v4
+[godoc-url]: https://godoc.org/github.com/bitcomputing/oauth2/v4
+[godoc-image]: https://godoc.org/github.com/bitcomputing/oauth2/v4?status.svg
 [license-url]: http://opensource.org/licenses/MIT
 [license-image]: https://img.shields.io/npm/l/express.svg

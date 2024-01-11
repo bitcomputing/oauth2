@@ -7,13 +7,13 @@ import (
 	"net/http/httptest"
 	"testing"
 
+	"github.com/bitcomputing/oauth2/v4"
+	"github.com/bitcomputing/oauth2/v4/errors"
+	"github.com/bitcomputing/oauth2/v4/manage"
+	"github.com/bitcomputing/oauth2/v4/models"
+	"github.com/bitcomputing/oauth2/v4/server"
+	"github.com/bitcomputing/oauth2/v4/store"
 	"github.com/gavv/httpexpect"
-	"github.com/go-oauth2/oauth2/v4"
-	"github.com/go-oauth2/oauth2/v4/errors"
-	"github.com/go-oauth2/oauth2/v4/manage"
-	"github.com/go-oauth2/oauth2/v4/models"
-	"github.com/go-oauth2/oauth2/v4/server"
-	"github.com/go-oauth2/oauth2/v4/store"
 )
 
 var (
