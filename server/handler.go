@@ -60,7 +60,7 @@ type (
 func ClientFormHandler(r *http.Request) (string, string, error) {
 	clientID := r.Form.Get("client_id")
 	if clientID == "" {
-		return "", "", errors.ErrInvalidClient
+		return "", "", errors.ErrInvalidClient4
 	}
 	clientSecret := r.Form.Get("client_secret")
 	return clientID, clientSecret, nil
@@ -70,7 +70,7 @@ func ClientFormHandler(r *http.Request) (string, string, error) {
 func ClientBasicHandler(r *http.Request) (string, string, error) {
 	username, password, ok := r.BasicAuth()
 	if !ok {
-		return "", "", errors.ErrInvalidClient
+		return "", "", errors.ErrInvalidClient5
 	}
 	return username, password, nil
 }
